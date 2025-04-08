@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 
 app = Flask(__name__)
-app.secret_key = 'clave_secreta_edufutura'
+
 
 @app.route('/')
 def inicio():
@@ -26,8 +26,6 @@ def contacto():
         correo = request.form['correo']
         mensaje = request.form['mensaje']
         
-        # Aquí podrías procesar los datos, guardarlos en una base de datos, etc.
-        # Por ahora, solo mostraremos un mensaje de éxito
         flash('¡Mensaje enviado con éxito! Gracias por contactarnos.')
         return redirect(url_for('contacto'))
     
