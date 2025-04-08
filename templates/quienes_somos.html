@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block titulo %}EduFutura - Quiénes Somos{% endblock %}
+
+{% block contenido %}
+<section class="encabezado_pagina">
+    <div class="contenedor">
+        <h1>Quiénes Somos</h1>
+        <p>Conoce nuestra historia, misión y el equipo detrás de EduFutura</p>
+    </div>
+</section>
+
+<section class="historia">
+    <div class="contenedor">
+        <h2 class="titulo_seccion">Nuestra Historia</h2>
+        <div class="contenido_historia">
+            <div class="imagen_historia">
+                <img src="{{ url_for('static', filename='img/historia.jpg') }}" alt="Historia de EduFutura">
+            </div>
+            <div class="texto_historia">
+                <p>EduFutura nació en 2018 con una visión clara: democratizar la educación de calidad. Fundada por un grupo de educadores y expertos en tecnología, nuestra plataforma comenzó ofreciendo cursos básicos de programación y ha evolucionado hasta convertirse en un ecosistema educativo completo.</p>
+                <p>A lo largo de estos años, hemos ayudado a más de 50,000 estudiantes a alcanzar sus metas educativas y profesionales, expandiendo constantemente nuestra oferta de cursos y servicios para adaptarnos a las necesidades cambiantes del mercado laboral y educativo.</p>
+                <p>Hoy, EduFutura es reconocida como una de las plataformas educativas más innovadoras, combinando tecnología de vanguardia con metodologías pedagógicas efectivas para ofrecer una experiencia de aprendizaje única.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mision_vision">
+    <div class="contenedor">
+        <div class="mision">
+            <h2 class="titulo_seccion">Nuestra Misión</h2>
+            <p>Proporcionar educación de calidad accesible para todos, utilizando tecnología innovadora y metodologías pedagógicas efectivas que permitan a cada estudiante desarrollar su máximo potencial, independientemente de su ubicación o circunstancias.</p>
+        </div>
+        <div class="vision">
+            <h2 class="titulo_seccion">Nuestra Visión</h2>
+            <p>Ser la plataforma educativa líder a nivel global, reconocida por transformar vidas a través de experiencias de aprendizaje personalizadas, innovadoras y de alta calidad, contribuyendo a crear una sociedad más equitativa y preparada para los desafíos del futuro.</p>
+        </div>
+    </div>
+</section>
+
+<section class="equipo">
+    <div class="contenedor">
+        <h2 class="titulo_seccion">Nuestro Equipo</h2>
+        <div class="miembros_equipo">
+            <div class="miembro">
+                <div class="foto_miembro">
+                    <img src="{{ url_for('static', filename='img/director.jpg') }}" alt="Director Ejecutivo">
+                </div>
+                <h3>Dr. Alejandro Vega</h3>
+                <p class="cargo">Director Ejecutivo</p>
+                <p class="descripcion">Doctor en Ciencias de la Educación con más de 15 años de experiencia en innovación educativa y tecnología aplicada al aprendizaje.</p>
+            </div>
+            <div class="miembro">
+                <div class="foto_miembro">
+                    <img src="{{ url_for('static', filename='img/directora_academica.jpg') }}" alt="Directora Académica">
+                </div>
+                <h3>Dra. Laura Mendoza</h3>
+                <p class="cargo">Directora Académica</p>
+                <p class="descripcion">Especialista en diseño curricular y metodologías de enseñanza innovadoras. Ha liderado proyectos educativos en más de 10 países.</p>
+            </div>
+            <div class="miembro">
+                <div class="foto_miembro">
+                    <img src="{{ url_for('static', filename='img/director_tecnologia.jpg') }}" alt="Director de Tecnología">
+                </div>
+                <h3>Ing. Roberto Sánchez</h3>
+                <p class="cargo">Director de Tecnología</p>
+                <p class="descripcion">Ingeniero informático con experiencia en desarrollo de plataformas educativas y sistemas de aprendizaje adaptativo.</p>
+            </div>
+            <div class="miembro">
+                <div class="foto_miembro">
+                    <img src="{{ url_for('static', filename='img/coordinadora_tutores.jpg') }}" alt="Coordinadora de Tutores">
+                </div>
+                <h3>Prof. Carmen Ortiz</h3>
+                <p class="cargo">Coordinadora de Tutores</p>
+                <p class="descripcion">Educadora con amplia experiencia en formación docente y desarrollo de programas de tutoría personalizada.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="valores">
+    <div class="contenedor">
+        <h2 class="titulo_seccion">Nuestros Valores</h2>
+        <div class="lista_valores">
+            <div class="valor">
+                <i class="fas fa-star icono"></i>
+                <h3>Excelencia</h3>
+                <p>Buscamos la máxima calidad en cada aspecto de nuestra plataforma y servicios educativos.</p>
+            </div>
+            <div class="valor">
+                <i class="fas fa-users icono"></i>
+                <h3>Inclusión</h3>
+                <p>Creemos que la educación de calidad debe ser accesible para todas las personas, sin importar su origen o condición.</p>
+            </div>
+            <div class="valor">
+                <i class="fas fa-lightbulb icono"></i>
+                <h3>Innovación</h3>
+                <p>Nos mantenemos a la vanguardia de las tendencias educativas y tecnológicas para ofrecer la mejor experiencia de aprendizaje.</p>
+            </div>
+            <div class="valor">
+                <i class="fas fa-handshake icono"></i>
+                <h3>Compromiso</h3>
+                <p>Estamos comprometidos con el éxito de nuestros estudiantes y su desarrollo integral como profesionales.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

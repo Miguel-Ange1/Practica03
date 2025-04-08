@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block titulo %}EduFutura - Contacto{% endblock %}
+
+{% block contenido %}
+<section class="encabezado_pagina">
+    <div class="contenedor">
+        <h1>Contacto</h1>
+        <p>Estamos aquí para ayudarte. Contáctanos con cualquier pregunta o comentario.</p>
+    </div>
+</section>
+
+<section class="informacion_contacto">
+    <div class="contenedor">
+        <div class="datos_contacto">
+            <div class="dato">
+                <i class="fas fa-map-marker-alt icono"></i>
+                <div class="info">
+                    <h3>Dirección</h3>
+                    <p>Av. Educación 1234, Col. Innovación</p>
+                    <p>Ciudad Universitaria, CP 12345</p>
+                </div>
+            </div>
+            <div class="dato">
+                <i class="fas fa-phone icono"></i>
+                <div class="info">
+                    <h3>Teléfono</h3>
+                    <p>+52 (55) 1234 5678</p>
+                    <p>Lunes a Viernes: 9:00 - 18:00</p>
+                </div>
+            </div>
+            <div class="dato">
+                <i class="fas fa-envelope icono"></i>
+                <div class="info">
+                    <h3>Correo Electrónico</h3>
+                    <p>info@edufutura.com</p>
+                    <p>soporte@edufutura.com</p>
+                </div>
+            </div>
+            <div class="dato">
+                <i class="fas fa-headset icono"></i>
+                <div class="info">
+                    <h3>Soporte</h3>
+                    <p>Chat en vivo disponible</p>
+                    <p>Tiempo de respuesta: 24 horas</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mapa">
+            <h3>Nuestra Ubicación</h3>
+            <div class="contenedor_mapa">
+                <img src="{{ url_for('static', filename='img/mapa.jpg') }}" alt="Mapa de ubicación">
+                <!-- Aquí se podría insertar un mapa de Google Maps con el siguiente código: -->
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!..." width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="formulario_contacto">
+    <div class="contenedor">
+        <h2 class="titulo_seccion">Envíanos un mensaje</h2>
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="mensajes_flash">
+                    {% for message in messages %}
+                        <div class="mensaje_exito">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <form method="POST" action="{{ url_for('contacto') }}" class="formulario">
+            <div class="campo_formulario">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="campo_formulario">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div class="campo_formulario">
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto">
+            </div>
+            <div class="campo_formulario">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="boton boton_primario">Enviar Mensaje</button>
+        </form>
+    </div>
+</section>
+
+<section class="preguntas_frecuentes">
+    <div class="contenedor">
+        <h2 class="titulo_seccion">Preguntas Frecuentes</h2>
+        <div class="acordeon">
+            <div class="item_acordeon">
+                <div class="titulo_acordeon">¿Cómo puedo inscribirme en un curso?</div>
+                <div class="contenido_acordeon">
+                    <p>Para inscribirte en un curso, simplemente navega a la página de Servicios, selecciona el curso que te interesa y haz clic en "Inscribirse". Si aún no tienes una cuenta, deberás crear una antes de completar la inscripción.</p>
+                </div>
+            </div>
+            <div class="item_acordeon">
+                <div class="titulo_acordeon">¿Cuáles son los métodos de pago aceptados?</div>
+                <div class="contenido_acordeon">
+                    <p>Aceptamos tarjetas de crédito/débito (Visa, MasterCard, American Express), PayPal, transferencias bancarias y, en algunos países, pagos en efectivo a través de servicios locales.</p>
+                </div>
+            </div>
+            <div class="item_acordeon">
+                <div class="titulo_acordeon">¿Puedo cancelar mi suscripción en cualquier momento?</div>
+                <div class="contenido_acordeon">
+                    <p>Sí, puedes cancelar tu suscripción en cualquier momento desde tu perfil de usuario. La cancelación será efectiva al final del período de facturación actual.</p>
+                </div>
+            </div>
+            <div class="item_acordeon">
+                <div class="titulo_acordeon">¿Los certificados tienen validez oficial?</div>
+                <div class="contenido_acordeon">
+                    <p>Nuestros certificados son reconocidos por muchas empresas y organizaciones. Algunos cursos ofrecen certificaciones con validez académica gracias a nuestras alianzas con universidades. Consulta la descripción específica de cada curso para más detalles.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

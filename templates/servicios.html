@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block titulo %}EduFutura - Servicios{% endblock %}
+
+{% block contenido %}
+<section class="encabezado_pagina">
+    <div class="contenedor">
+        <h1>Nuestros Servicios</h1>
+        <p>Descubre todas las opciones educativas que tenemos para ti</p>
+    </div>
+</section>
+
+<section class="servicios_lista">
+    <div class="contenedor">
+        <div class="servicio">
+            <div class="imagen_servicio">
+                <img src="{{ url_for('static', filename='img/cursos_online.jpg') }}" alt="Cursos Online">
+            </div>
+            <div class="info_servicio">
+                <h2>Cursos Online</h2>
+                <p>Nuestra amplia biblioteca de cursos online abarca desde programación y diseño hasta idiomas y habilidades blandas. Cada curso está diseñado por expertos en la materia y cuenta con materiales interactivos, evaluaciones y certificación al finalizar.</p>
+                <ul class="caracteristicas_servicio">
+                    <li>Acceso 24/7 desde cualquier dispositivo</li>
+                    <li>Contenido actualizado constantemente</li>
+                    <li>Foros de discusión con otros estudiantes</li>
+                    <li>Certificación al completar el curso</li>
+                </ul>
+                <a href="#" class="boton boton_secundario">Leer más</a>
+            </div>
+        </div>
+
+        <div class="servicio">
+            <div class="imagen_servicio">
+                <img src="{{ url_for('static', filename='img/tutorias.jpg') }}" alt="Tutorías Personalizadas">
+            </div>
+            <div class="info_servicio">
+                <h2>Tutorías Personalizadas</h2>
+                <p>Nuestro servicio de tutorías personalizadas te conecta con profesores expertos que te ayudarán a superar dificultades específicas, reforzar conocimientos o prepararte para exámenes importantes. Las sesiones se adaptan a tu nivel y necesidades particulares.</p>
+                <ul class="caracteristicas_servicio">
+                    <li>Sesiones individuales o en grupos pequeños</li>
+                    <li>Horarios flexibles</li>
+                    <li>Tutores especializados en diversas materias</li>
+                    <li>Seguimiento personalizado de tu progreso</li>
+                </ul>
+                <a href="#" class="boton boton_secundario">Leer más</a>
+            </div>
+        </div>
+
+        <div class="servicio">
+            <div class="imagen_servicio">
+                <img src="{{ url_for('static', filename='img/recursos_educativos.jpg') }}" alt="Recursos Educativos">
+            </div>
+            <div class="info_servicio">
+                <h2>Recursos Educativos</h2>
+                <p>Ponemos a tu disposición una amplia variedad de recursos educativos gratuitos y premium: libros digitales, guías de estudio, ejercicios prácticos, infografías, videos explicativos y mucho más. Todo organizado por temas y niveles para facilitar tu aprendizaje.</p>
+                <ul class="caracteristicas_servicio">
+                    <li>Biblioteca digital con miles de recursos</li>
+                    <li>Materiales descargables para estudio offline</li>
+                    <li>Recursos adaptados a diferentes estilos de aprendizaje</li>
+                    <li>Actualizaciones mensuales con nuevo contenido</li>
+                </ul>
+                <a href="#" class="boton boton_secundario">Leer más</a>
+            </div>
+        </div>
+
+        <div class="servicio">
+            <div class="imagen_servicio">
+                <img src="{{ url_for('static', filename='img/talleres.jpg') }}" alt="Talleres y Webinars">
+            </div>
+            <div class="info_servicio">
+                <h2>Talleres y Webinars</h2>
+                <p>Participa en nuestros talleres prácticos y webinars en vivo sobre temas de actualidad e interés. Estas sesiones interactivas te permiten aprender directamente de expertos, hacer preguntas en tiempo real y conectar con otros estudiantes con intereses similares.</p>
+                <ul class="caracteristicas_servicio">
+                    <li>Eventos semanales sobre diversos temas</li>
+                    <li>Interacción en vivo con los presentadores</li>
+                    <li>Grabaciones disponibles después del evento</li>
+                    <li>Certificado de participación</li>
+                </ul>
+                <a href="#" class="boton boton_secundario">Leer más</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="planes">
+    <div class="contenedor">
+        <h2 class="titulo_seccion">Nuestros Planes</h2>
+        <div class="tarjetas_planes">
+            <div class="plan">
+                <h3>Plan Básico</h3>
+                <p class="precio">$19.99<span>/mes</span></p>
+                <ul class="caracteristicas_plan">
+                    <li>Acceso a 50+ cursos básicos</li>
+                    <li>Recursos educativos limitados</li>
+                    <li>Foros de comunidad</li>
+                    <li>Certificados digitales</li>
+                </ul>
+                <a href="#" class="boton boton_primario">Elegir Plan</a>
+            </div>
+            <div class="plan destacado">
+                <div class="etiqueta">Más Popular</div>
+                <h3>Plan Premium</h3>
+                <p class="precio">$39.99<span>/mes</span></p>
+                <ul class="caracteristicas_plan">
+                    <li>Acceso a todos los cursos</li>
+                    <li>2 horas de tutoría mensual</li>
+                    <li>Todos los recursos educativos</li>
+                    <li>Acceso a webinars exclusivos</li>
+                    <li>Certificados digitales y físicos</li>
+                </ul>
+                <a href="#" class="boton boton_primario">Elegir Plan</a>
+            </div>
+            <div class="plan">
+                <h3>Plan Institucional</h3>
+                <p class="precio">Personalizado</p>
+                <ul class="caracteristicas_plan">
+                    <li>Acceso para múltiples usuarios</li>
+                    <li>Cursos personalizados</li>
+                    <li>Panel de administración</li>
+                    <li>Reportes de progreso</li>
+                    <li>Soporte prioritario</li>
+                </ul>
+                <a href="#" class="boton boton_primario">Contactar</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

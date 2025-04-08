@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}EduFutura - Plataforma Educativa{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="cabecera">
+        <div class="contenedor">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo EduFutura">
+                <h1>EduFutura</h1>
+            </div>
+            <nav class="navegacion">
+                <ul>
+                    <li><a href="{{ url_for('inicio') }}" class="{% if request.path == '/' %}activo{% endif %}">Inicio</a></li>
+                    <li><a href="{{ url_for('quienes_somos') }}" class="{% if request.path == '/quienes_somos' %}activo{% endif %}">Quiénes Somos</a></li>
+                    <li><a href="{{ url_for('servicios') }}" class="{% if request.path == '/servicios' %}activo{% endif %}">Servicios</a></li>
+                    <li><a href="{{ url_for('noticias') }}" class="{% if request.path == '/noticias' %}activo{% endif %}">Noticias</a></li>
+                    <li><a href="{{ url_for('contacto') }}" class="{% if request.path == '/contacto' %}activo{% endif %}">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenido">
+        {% block contenido %}{% endblock %}
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="redes_sociales">
+                <a href="#" class="red_social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="red_social"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="red_social"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="red_social"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="red_social"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="derechos">© 2025 EduFutura. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

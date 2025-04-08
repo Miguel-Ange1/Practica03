@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block titulo %}EduFutura - Noticias{% endblock %}
+
+{% block contenido %}
+<section class="encabezado_pagina">
+    <div class="contenedor">
+        <h1>Noticias y Novedades</h1>
+        <p>Mantente al día con las últimas novedades de EduFutura y el mundo educativo</p>
+    </div>
+</section>
+
+<section class="noticias_lista">
+    <div class="contenedor">
+        <article class="noticia">
+            <div class="imagen_noticia">
+                <img src="{{ url_for('static', filename='img/noticia1.jpg') }}" alt="Lanzamiento de nuevos cursos">
+            </div>
+            <div class="contenido_noticia">
+                <div class="meta_noticia">
+                    <span class="fecha">15 de marzo, 2025</span>
+                    <span class="categoria">Nuevos Cursos</span>
+                </div>
+                <h2>Lanzamiento de 20 nuevos cursos de Inteligencia Artificial y Machine Learning</h2>
+                <p>Nos complace anunciar el lanzamiento de nuestra nueva serie de cursos especializados en Inteligencia Artificial y Machine Learning, diseñados en colaboración con expertos de las principales empresas tecnológicas. Estos cursos abarcan desde conceptos básicos hasta aplicaciones avanzadas, permitiendo a los estudiantes desarrollar habilidades altamente demandadas en el mercado laboral actual.</p>
+                <a href="#" class="boton boton_secundario">Leer más</a>
+            </div>
+        </article>
+
+        <article class="noticia">
+            <div class="imagen_noticia">
+                <img src="{{ url_for('static', filename='img/noticia2.jpg') }}" alt="Alianza estratégica">
+            </div>
+            <div class="contenido_noticia">
+                <div class="meta_noticia">
+                    <span class="fecha">28 de febrero, 2025</span>
+                    <span class="categoria">Alianzas</span>
+                </div>
+                <h2>EduFutura firma alianza estratégica con Universidad Internacional</h2>
+                <p>Hemos establecido una importante alianza con la Universidad Internacional que permitirá a nuestros estudiantes obtener créditos académicos oficiales por los cursos completados en nuestra plataforma. Esta colaboración representa un paso significativo en nuestro compromiso de ofrecer educación de calidad con reconocimiento formal, abriendo nuevas oportunidades para el desarrollo profesional de nuestra comunidad.</p>
+                <a href="#" class="boton boton_secundario">Leer más</a>
+            </div>
+        </article>
+
+        <article class="noticia">
+            <div class="imagen_noticia">
+                <img src="{{ url_for('static', filename='img/noticia3.jpg') }}" alt="Nueva aplicación móvil">
+            </div>
+            <div class="contenido_noticia">
+                <div class="meta_noticia">
+                    <span class="fecha">10 de febrero, 2025</span>
+                    <span class="categoria">Tecnología</span>
+                </div>
+                <h2>Nueva aplicación móvil de EduFutura con funcionalidades offline</h2>
+                <p>Lanzamos nuestra aplicación móvil completamente rediseñada, que ahora incluye la posibilidad de descargar cursos para visualizarlos sin conexión a internet. Esta actualización responde a las necesidades de nuestros estudiantes que viajan frecuentemente o tienen acceso limitado a internet, permitiéndoles continuar su aprendizaje en cualquier momento y lugar.</p>
+                <a href="#" class="boton boton_secundario">Leer más</a>
+            </div>
+        </article>
+
+        <article class="noticia">
+            <div class="imagen_noticia">
+                <img src="{{ url_for('static', filename='img/noticia4.jpg') }}" alt="Programa de becas">
+            </div>
+            <div class="contenido_noticia">
+                <div class="meta_noticia">
+                    <span class="fecha">5 de enero, 2025</span>
+                    <span class="categoria">Becas</span>
+                </div>
+                <h2>Lanzamiento del programa de becas "Futuros Líderes" para estudiantes de Latinoamérica</h2>
+                <p>Con gran entusiasmo anunciamos nuestro nuevo programa de becas "Futuros Líderes", dirigido a estudiantes talentosos de Latinoamérica con recursos limitados. Este programa otorgará acceso completo a nuestra plataforma y mentoría personalizada a 500 estudiantes seleccionados, como parte de nuestro compromiso con la democratización de la educación de calidad en la región.</p>
+                <a href="#" class="boton boton_secundario">Leer más</a>
+            </div>
+        </article>
+
+        <article class="noticia">
+            <div class="imagen_noticia">
+                <img src="{{ url_for('static', filename='img/noticia5.jpg') }}" alt="Conferencia educativa">
+            </div>
+            <div class="contenido_noticia">
+                <div class="meta_noticia">
+                    <span class="fecha">15 de diciembre, 2024</span>
+                    <span class="categoria">Eventos</span>
+                </div>
+                <h2>EduFutura organizará la conferencia internacional "Educación del Futuro" en mayo 2025</h2>
+                <p>Nos complace anunciar que seremos los anfitriones de la conferencia internacional "Educación del Futuro" que se celebrará en mayo de 2025. Este evento reunirá a expertos en educación, tecnología e innovación de todo el mundo para discutir las tendencias y desafíos del sector educativo. Los estudiantes de EduFutura tendrán acceso preferencial a todas las sesiones.</p>
+                <a href="#" class="boton boton_secundario">Leer más</a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="suscripcion_noticias">
+    <div class="contenedor">
+        <h2>Suscríbete a nuestro boletín</h2>
+        <p>Recibe las últimas noticias y actualizaciones directamente en tu correo electrónico</p>
+        <form class="formulario_suscripcion">
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="boton boton_primario">Suscribirse</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

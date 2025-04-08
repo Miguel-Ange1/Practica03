@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block titulo %}EduFutura - Inicio{% endblock %}
+
+{% block contenido %}
+<section class="banner">
+    <div class="contenedor">
+        <h2>Transforma tu futuro con educación de calidad</h2>
+        <p>Plataforma educativa innovadora con cursos, tutorías y recursos para todas las edades</p>
+        <div class="botones">
+            <a href="{{ url_for('servicios') }}" class="boton boton_primario">Explorar Cursos</a>
+            <a href="{{ url_for('contacto') }}" class="boton boton_secundario">Contáctanos</a>
+        </div>
+    </div>
+</section>
+
+<section class="caracteristicas">
+    <div class="contenedor">
+        <h2 class="titulo_seccion">¿Por qué elegir EduFutura?</h2>
+        <div class="tarjetas">
+            <div class="tarjeta">
+                <i class="fas fa-graduation-cap icono"></i>
+                <h3>Profesores Expertos</h3>
+                <p>Nuestro equipo está formado por educadores con amplia experiencia y pasión por la enseñanza.</p>
+            </div>
+            <div class="tarjeta">
+                <i class="fas fa-laptop icono"></i>
+                <h3>Plataforma Interactiva</h3>
+                <p>Aprende a tu ritmo con nuestra plataforma diseñada para una experiencia educativa óptima.</p>
+            </div>
+            <div class="tarjeta">
+                <i class="fas fa-certificate icono"></i>
+                <h3>Certificaciones</h3>
+                <p>Obtén certificados reconocidos que validen tus conocimientos y mejoren tu perfil profesional.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonios">
+    <div class="contenedor">
+        <h2 class="titulo_seccion">Lo que dicen nuestros estudiantes</h2>
+        <div class="carrusel_testimonios">
+            <div class="testimonio">
+                <div class="foto_estudiante">
+                    <img src="{{ url_for('static', filename='img/estudiante1.jpg') }}" alt="Estudiante 1">
+                </div>
+                <p class="cita">"EduFutura transformó mi carrera profesional. Los cursos son prácticos y los profesores están siempre disponibles para resolver dudas."</p>
+                <p class="nombre">María González</p>
+                <p class="curso">Curso de Desarrollo Web</p>
+            </div>
+            <div class="testimonio">
+                <div class="foto_estudiante">
+                    <img src="{{ url_for('static', filename='img/estudiante2.jpg') }}" alt="Estudiante 2">
+                </div>
+                <p class="cita">"La flexibilidad de horarios y la calidad del contenido hacen que aprender sea fácil y divertido. ¡Totalmente recomendado!"</p>
+                <p class="nombre">Carlos Rodríguez</p>
+                <p class="curso">Curso de Marketing Digital</p>
+            </div>
+            <div class="testimonio">
+                <div class="foto_estudiante">
+                    <img src="{{ url_for('static', filename='img/estudiante3.jpg') }}" alt="Estudiante 3">
+                </div>
+                <p class="cita">"Gracias a las tutorías personalizadas pude superar mis dificultades en matemáticas. Los tutores son pacientes y explican muy bien."</p>
+                <p class="nombre">Ana Martínez</p>
+                <p class="curso">Tutoría de Matemáticas</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="llamada_accion">
+    <div class="contenedor">
+        <h2>¿Listo para comenzar tu viaje educativo?</h2>
+        <p>Únete a miles de estudiantes que ya están transformando su futuro con EduFutura</p>
+        <a href="{{ url_for('servicios') }}" class="boton boton_primario">Comenzar Ahora</a>
+    </div>
+</section>
+{% endblock %}
